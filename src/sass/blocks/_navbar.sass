@@ -1,0 +1,90 @@
+.navbar
+    min-width: 320px
+    &-wrapper
+        display: flex
+        padding-left: 30px
+        padding-right: 70px
+        align-items: center
+        justify-content: space-between
+        padding-top: 20px
+    &-logoblock
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &__menu
+            margin-right: 28px
+    &-settings
+        display: flex
+        align-items: center
+        &-wrapper
+            min-width: 175px
+            display: flex
+            justify-content: space-around
+            margin-right: 45px
+        &__search
+            display: none
+    &__notify
+        position: relative
+        display: flex
+    &__counter
+        position: absolute
+        font-size: 12px
+        color: #fff
+        left: 9px
+        bottom: 13px
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #FF0000
+        border-radius: 18px
+        height: 18px
+        width: 18px
+    &-search
+        position: relative
+        display: flex
+        margin-left: 60px
+        &__icon
+            position: absolute
+            top: 13px
+            right: 18px
+.search
+    width: 830px
+    height: 44px
+    border-radius: 22px
+    border-width: 0
+    padding: 12px 23px
+    font-size: 16px
+    line-height: 20
+    background-color: rgba(235, 235, 235, .5)
+    outline: none
+    cursor: text
+    &:focus
+        border: 1px solid #000
+
+@media(max-width: 1400px)
+    .search
+        max-width: 440px
+@media(max-width: 1200px)
+    .navbar
+        &-settings
+            &-wrapper
+                margin-right: 20px
+    .search
+        width: 300px
+@media(max-width: 768px)
+    .navbar
+        &-wrapper
+            padding: 16px 12px
+        &-settings
+            &-wrapper
+                display: none
+            &__search
+                display: block
+                margin-right: 24px
+        &-logoblock
+            justify-content: space-between
+        &-search
+            &__icon
+                display: none
+    .search
+        display: none
