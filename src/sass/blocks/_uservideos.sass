@@ -1,4 +1,5 @@
 .uservideos
+    width: 100%
     &-wrapper
         &__title
             display: flex
@@ -13,21 +14,38 @@
             margin-right: 20px
         &__username
             font-size: 26px
+    &-slider
+        &_wrapper
+            position: relative
+    &__slider
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
     &-sliderblock
         width: 250px
-        height: 150px   
         margin-top: 30px
         margin-left: 40px
         cursor: pointer
+        position: relative
+        &__video
+            width: 250px
+            height: 150px
+    &-video
+        &__duration
+            position: absolute
+            right: 10px
+            top: 116px
+            color: #fff
+            border-radius: 12px
+            background-color: rgba(0, 0, 0, 0.3)
+            padding: 3px 9px
 .arrows
     display: flex
     width: 66px
     justify-content: space-between
+    margin-right: 150px
     &__left
         cursor: pointer
     &__right
         cursor: pointer
-.container
-    width: 1000px
-.slider
-    width: 100%
