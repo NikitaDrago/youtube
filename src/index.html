@@ -87,7 +87,7 @@
 
 <body>
     <section class="body-wrapper">
-        <section class="menu">
+        <div class="menu">
             <ul class="menu-wrapper menu-wrapper_data">
                 <li class="menu-wrapper__item">
                     <button class="button item__button">
@@ -299,137 +299,228 @@
                     </div>
                 </button>
             </ul>
-        </section>
-        <section class="uservideos">
-            <div class="uservideos-wrapper">
-                <div class="uservideos-wrapper__title">
-                    <div class="uservideos-wrapper__user">
-                        <img src="img/uservideos/userpic.png" alt="" class="uservideos-wrapper__userpic">
-                        <span class="uservideos-wrapper__username">Dollie Blair</span>
-                    </div>
-                    <div class="arrows">
-                        <div class="arrows__left">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path opacity="0.24"
-                                    d="M14 28C21.732 28 28 21.732 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.732 6.26801 28 14 28Z"
-                                    fill="black" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M16.0017 8.66611L16.5363 9.20513C16.7121 9.39201 16.8 9.61012 16.8 9.8592C16.8 10.1133 16.7121 10.329 16.5363 10.5063L13.0719 14L16.5363 17.4937C16.712 17.671 16.8 17.8867 16.8 18.1407C16.8 18.3899 16.712 18.608 16.5363 18.7949L16.0016 19.3268C15.8211 19.5089 15.6048 19.6 15.3529 19.6C15.0963 19.6 14.8825 19.5089 14.7114 19.3268L10.0709 14.647C9.89034 14.4744 9.80005 14.2589 9.80005 14C9.80005 13.746 9.89034 13.5279 10.0709 13.3459L14.7114 8.66611C14.8873 8.48876 15.1011 8.4 15.3529 8.4C15.6001 8.4 15.8163 8.48876 16.0017 8.66611Z"
-                                    fill="white" />
-                            </svg>
+        </div>
+        <div class="videos-wrapper">
+            <div class="uservideos">
+                <div class="uservideos-wrapper">
+                    <div class="uservideos-wrapper__title">
+                        <div class="uservideos-wrapper__user">
+                            <img src="img/uservideos/userpic.png" alt="" class="uservideos-wrapper__userpic">
+                            <span class="uservideos-wrapper__username">Dollie Blair</span>
                         </div>
-                        <div class="arrows__right">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path opacity="0.24"
-                                    d="M14 28C21.732 28 28 21.732 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.732 6.26801 28 14 28Z"
-                                    fill="black" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M11.9983 8.66611L11.4637 9.20513C11.2879 9.39201 11.2 9.61012 11.2 9.8592C11.2 10.1133 11.2879 10.329 11.4637 10.5063L14.9281 14L11.4637 17.4937C11.288 17.671 11.2 17.8867 11.2 18.1407C11.2 18.3899 11.288 18.608 11.4637 18.7949L11.9984 19.3268C12.1789 19.5089 12.3952 19.6 12.6471 19.6C12.9037 19.6 13.1175 19.5089 13.2886 19.3268L17.9291 14.647C18.1097 14.4744 18.2 14.2589 18.2 14C18.2 13.746 18.1097 13.5279 17.9291 13.3459L13.2886 8.66611C13.1127 8.48876 12.8989 8.4 12.6471 8.4C12.3999 8.4 12.1837 8.48876 11.9983 8.66611Z"
-                                    fill="white" />
-                            </svg>
+                        <div class="arrows">
+                            <div class="arrows__left" id="arrows__left">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.24"
+                                        d="M14 28C21.732 28 28 21.732 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.732 6.26801 28 14 28Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.0017 8.66611L16.5363 9.20513C16.7121 9.39201 16.8 9.61012 16.8 9.8592C16.8 10.1133 16.7121 10.329 16.5363 10.5063L13.0719 14L16.5363 17.4937C16.712 17.671 16.8 17.8867 16.8 18.1407C16.8 18.3899 16.712 18.608 16.5363 18.7949L16.0016 19.3268C15.8211 19.5089 15.6048 19.6 15.3529 19.6C15.0963 19.6 14.8825 19.5089 14.7114 19.3268L10.0709 14.647C9.89034 14.4744 9.80005 14.2589 9.80005 14C9.80005 13.746 9.89034 13.5279 10.0709 13.3459L14.7114 8.66611C14.8873 8.48876 15.1011 8.4 15.3529 8.4C15.6001 8.4 15.8163 8.48876 16.0017 8.66611Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="arrows__right" id="arrows__right">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.24"
+                                        d="M14 28C21.732 28 28 21.732 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.732 6.26801 28 14 28Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.9983 8.66611L11.4637 9.20513C11.2879 9.39201 11.2 9.61012 11.2 9.8592C11.2 10.1133 11.2879 10.329 11.4637 10.5063L14.9281 14L11.4637 17.4937C11.288 17.671 11.2 17.8867 11.2 18.1407C11.2 18.3899 11.288 18.608 11.4637 18.7949L11.9984 19.3268C12.1789 19.5089 12.3952 19.6 12.6471 19.6C12.9037 19.6 13.1175 19.5089 13.2886 19.3268L17.9291 14.647C18.1097 14.4744 18.2 14.2589 18.2 14C18.2 13.746 18.1097 13.5279 17.9291 13.3459L13.2886 8.66611C13.1127 8.48876 12.8989 8.4 12.6471 8.4C12.3999 8.4 12.1837 8.48876 11.9983 8.66611Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="uservideos-slider_wrapper">
-                    <div class="uservideos__slider">
-                        <div class="slider">
-                            <div class="uservideos-sliderblock">
-                                <span class="uservideos-video__duration">4:15</span>
-                                <img src="img/uservideos/uservideo-1.jpg" alt="" class="uservideos-sliderblock__video">
-                                <span class="video__name">A Brief History Of Creation</span>
-                                <div class="video-dscWrapper">
-                                    <p class="video-dscWrapper__description">
-                                        <span class="video__views">80k views</span>
-                                        <span class="video__dot">·</span>
-                                        <span class="video__data">3 days ago</span>
-                                    </p>
-                                    <a href="#" class="video__channelName">Dollie Blair</a>
+                    <div class="uservideos-slider_wrapper">
+                        <div class="uservideos__slider">
+                            <div class="slider">
+                                <div class="uservideos-sliderblock">
+                                    <span class="uservideos-video__duration">4:15</span>
+                                    <img src="img/uservideos/uservideo-1.jpg" alt="" class="uservideos-sliderblock__video">
+                                    <span class="video__name">A Brief History Of Creation</span>
+                                    <div class="video-dscWrapper">
+                                        <p class="video-dscWrapper__description">
+                                            <span class="video__views">80k views</span>
+                                            <span class="video__dot">·</span>
+                                            <span class="video__data">3 days ago</span>
+                                        </p>
+                                        <a href="#" class="video__channelName">Dollie Blair</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="uservideos-sliderblock">
-                                <span class="uservideos-video__duration">8:00</span>
-                                <img src="img/uservideos/uservideo-2.jpg" alt="" class="uservideos-sliderblock__video">
-                                <span class="video__name">Selecting The Right Hotel</span>
-                                <div class="video-dscWrapper">
-                                    <p class="video-dscWrapper__description">
-                                        <span class="video__views">123k views</span>
-                                        <span class="video__dot">·</span>
-                                        <span class="video__data">1 months ago</span>
-                                    </p>
-                                    <a href="#" class="video__channelName">Dollie Blair</a>
+                                <div class="uservideos-sliderblock">
+                                    <span class="uservideos-video__duration">8:00</span>
+                                    <img src="img/uservideos/uservideo-2.jpg" alt="" class="uservideos-sliderblock__video">
+                                    <span class="video__name">Selecting The Right Hotel</span>
+                                    <div class="video-dscWrapper">
+                                        <p class="video-dscWrapper__description">
+                                            <span class="video__views">123k views</span>
+                                            <span class="video__dot">·</span>
+                                            <span class="video__data">1 months ago</span>
+                                        </p>
+                                        <a href="#" class="video__channelName">Dollie Blair</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="uservideos-sliderblock">
-                                <span class="uservideos-video__duration">5:32</span>
-                                <img src="img/uservideos/uservideo-3.jpg" alt="" class="uservideos-sliderblock__video">
-                                <span class="video__name">Asteroids</span>
-                                <div class="video-dscWrapper">
-                                    <p class="video-dscWrapper__description">
-                                        <span class="video__views">43k views</span>
-                                        <span class="video__dot">·</span>
-                                        <span class="video__data">1 months ago</span>
-                                    </p>
-                                    <a href="#" class="video__channelName">Dollie Blair</a>
+                                <div class="uservideos-sliderblock">
+                                    <span class="uservideos-video__duration">5:32</span>
+                                    <img src="img/uservideos/uservideo-3.jpg" alt="" class="uservideos-sliderblock__video">
+                                    <span class="video__name">Asteroids</span>
+                                    <div class="video-dscWrapper">
+                                        <p class="video-dscWrapper__description">
+                                            <span class="video__views">43k views</span>
+                                            <span class="video__dot">·</span>
+                                            <span class="video__data">1 months ago</span>
+                                        </p>
+                                        <a href="#" class="video__channelName">Dollie Blair</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="uservideos-sliderblock">
-                                <span class="uservideos-video__duration">6:40</span>
-                                <img src="img/uservideos/uservideo-4.jpg" alt="" class="uservideos-sliderblock__video">
-                                <span class="video__name">Telescopes 101</span>
-                                <div class="video-dscWrapper">
-                                    <p class="video-dscWrapper__description">
-                                        <span class="video__views">11k views</span>
-                                        <span class="video__dot">·</span>
-                                        <span class="video__data">6 months ago</span>
-                                    </p>
-                                    <a href="#" class="video__channelName">Dollie Blair</a>
+                                <div class="uservideos-sliderblock">
+                                    <span class="uservideos-video__duration">6:40</span>
+                                    <img src="img/uservideos/uservideo-4.jpg" alt="" class="uservideos-sliderblock__video">
+                                    <span class="video__name">Telescopes 101</span>
+                                    <div class="video-dscWrapper">
+                                        <p class="video-dscWrapper__description">
+                                            <span class="video__views">11k views</span>
+                                            <span class="video__dot">·</span>
+                                            <span class="video__data">6 months ago</span>
+                                        </p>
+                                        <a href="#" class="video__channelName">Dollie Blair</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="uservideos-sliderblock">
-                                <span class="uservideos-video__duration">1:45</span>
-                                <img src="img/uservideos/uservideo-5.jpg" alt="" class="uservideos-sliderblock__video">
-                                <span class="video__name">Medical Care Is Just</span>
-                                <div class="video-dscWrapper">
-                                    <p class="video-dscWrapper__description">
-                                        <span class="video__views">18k views</span>
-                                        <span class="video__dot">·</span>
-                                        <span class="video__data">2 days ago</span>
-                                    </p>
-                                    <a href="#" class="video__channelName">Dollie Blair</a>
+                                <div class="uservideos-sliderblock">
+                                    <span class="uservideos-video__duration">1:45</span>
+                                    <img src="img/uservideos/uservideo-5.jpg" alt="" class="uservideos-sliderblock__video">
+                                    <span class="video__name">Medical Care Is Just</span>
+                                    <div class="video-dscWrapper">
+                                        <p class="video-dscWrapper__description">
+                                            <span class="video__views">18k views</span>
+                                            <span class="video__dot">·</span>
+                                            <span class="video__data">2 days ago</span>
+                                        </p>
+                                        <a href="#" class="video__channelName">Dollie Blair</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="uservideos-sliderblock">
-                                <span class="uservideos-video__duration">2:12</span>
-                                <img src="img/uservideos/uservideo-2.jpg" alt="" class="uservideos-sliderblock__video">
-                                <span class="video__name">Moon Gazing</span>
-                                <div class="video-dscWrapper">
-                                    <p class="video-dscWrapper__description">
-                                        <span class="video__views">67k views</span>
-                                        <span class="video__dot">·</span>
-                                        <span class="video__data">4 months ago</span>
-                                    </p>
-                                    <a href="#" class="video__channelName">Dollie Blair</a>
+                                <div class="uservideos-sliderblock">
+                                    <span class="uservideos-video__duration">2:12</span>
+                                    <img src="img/uservideos/uservideo-2.jpg" alt="" class="uservideos-sliderblock__video">
+                                    <span class="video__name">Moon Gazing</span>
+                                    <div class="video-dscWrapper">
+                                        <p class="video-dscWrapper__description">
+                                            <span class="video__views">67k views</span>
+                                            <span class="video__dot">·</span>
+                                            <span class="video__data">4 months ago</span>
+                                        </p>
+                                        <a href="#" class="video__channelName">Dollie Blair</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="uservideos-sliderblock">
-                                <img src="img/uservideos/uservideo-4.jpg" alt="" class="uservideos-sliderblock__video">
-                                <span class="video__name">Telescopes 101</span>
-                                <div class="video-dscWrapper">
-                                    <p class="video-dscWrapper__description">
-                                        <span class="video__views">11k views</span>
-                                        <span class="video__dot">·</span>
-                                        <span class="video__data">6 months ago</span>
-                                    </p>
-                                    <a href="#" class="video__channelName">Dollie Blair</a>
+                                <div class="uservideos-sliderblock">
+                                    <img src="img/uservideos/uservideo-4.jpg" alt="" class="uservideos-sliderblock__video">
+                                    <span class="video__name">Telescopes 101</span>
+                                    <div class="video-dscWrapper">
+                                        <p class="video-dscWrapper__description">
+                                            <span class="video__views">11k views</span>
+                                            <span class="video__dot">·</span>
+                                            <span class="video__data">6 months ago</span>
+                                        </p>
+                                        <a href="#" class="video__channelName">Dollie Blair</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="recommended">
+                <div class="recommended-wrapper">
+                    <div class="recommended-wrapper__title">
+                        <span class="recommended-wrapper__username">Recommended</span>
+                        <div class="arrows">
+                            <div class="arrows__left" id="rec__arrows_left">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.24"
+                                        d="M14 28C21.732 28 28 21.732 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.732 6.26801 28 14 28Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.0017 8.66611L16.5363 9.20513C16.7121 9.39201 16.8 9.61012 16.8 9.8592C16.8 10.1133 16.7121 10.329 16.5363 10.5063L13.0719 14L16.5363 17.4937C16.712 17.671 16.8 17.8867 16.8 18.1407C16.8 18.3899 16.712 18.608 16.5363 18.7949L16.0016 19.3268C15.8211 19.5089 15.6048 19.6 15.3529 19.6C15.0963 19.6 14.8825 19.5089 14.7114 19.3268L10.0709 14.647C9.89034 14.4744 9.80005 14.2589 9.80005 14C9.80005 13.746 9.89034 13.5279 10.0709 13.3459L14.7114 8.66611C14.8873 8.48876 15.1011 8.4 15.3529 8.4C15.6001 8.4 15.8163 8.48876 16.0017 8.66611Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="arrows__right" id="rec__arrows_right">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.24"
+                                        d="M14 28C21.732 28 28 21.732 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.732 6.26801 28 14 28Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.9983 8.66611L11.4637 9.20513C11.2879 9.39201 11.2 9.61012 11.2 9.8592C11.2 10.1133 11.2879 10.329 11.4637 10.5063L14.9281 14L11.4637 17.4937C11.288 17.671 11.2 17.8867 11.2 18.1407C11.2 18.3899 11.288 18.608 11.4637 18.7949L11.9984 19.3268C12.1789 19.5089 12.3952 19.6 12.6471 19.6C12.9037 19.6 13.1175 19.5089 13.2886 19.3268L17.9291 14.647C18.1097 14.4744 18.2 14.2589 18.2 14C18.2 13.746 18.1097 13.5279 17.9291 13.3459L13.2886 8.66611C13.1127 8.48876 12.8989 8.4 12.6471 8.4C12.3999 8.4 12.1837 8.48876 11.9983 8.66611Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommended-slider_wrapper">
+                        <div class="recommended__slider">
+                            <div class="rec_slider">
+                                <div class="recommended-sliderblock">
+                                    <span class="recommended-video__duration">3:40</span>
+                                    <img src="img/recommended/recommended-1.jpg" alt="" class="recommended-sliderblock__video">
+                                    <span class="video__name">Moon Gazing</span>
+                                    <div class="video-dscWrapper">
+                                        <p class="video-dscWrapper__description">
+                                            <span class="video__views">54k views</span>
+                                            <span class="video__dot">·</span>
+                                            <span class="video__data">11 months ago</span>
+                                        </p>
+                                        <a href="#" class="video__channelName">Edward Osborne</a>
+                                    </div>
+                                </div>
+                                <div class="recommended-sliderblock">
+                                    <span class="recommended-video__duration">2:12</span>
+                                    <img src="img/recommended/recommended-2.jpg" alt="" class="recommended-sliderblock__video">
+                                    <span class="video__name">Asteroids</span>
+                                    <div class="video-dscWrapper">
+                                        <p class="video-dscWrapper__description">
+                                            <span class="video__views">43k views</span>
+                                            <span class="video__dot">·</span>
+                                            <span class="video__data">1 months ago</span>
+                                        </p>
+                                        <a href="#" class="video__channelName">Dollie Blair</a>
+                                    </div>
+                                </div>
+                                <div class="recommended-sliderblock">
+                                    <span class="recommended-video__duration">2:12</span>
+                                    <img src="img/recommended/recommended-3.jpg" alt="" class="recommended-sliderblock__video">
+                                    <span class="video__name">Moon Gazing</span>
+                                    <div class="video-dscWrapper">
+                                        <p class="video-dscWrapper__description">
+                                            <span class="video__views">125k views</span>
+                                            <span class="video__dot">·</span>
+                                            <span class="video__data">4 months ago</span>
+                                        </p>
+                                        <a href="#" class="video__channelName">Dollie Blair</a>
+                                    </div>
+                                </div>
+                                <div class="recommended-sliderblock">
+                                    <span class="recommended-video__duration">2:12</span>
+                                    <img src="img/recommended/recommended-2.jpg" alt="" class="recommended-sliderblock__video">
+                                    <span class="video__name">Asteroids</span>
+                                    <div class="video-dscWrapper">
+                                        <p class="video-dscWrapper__description">
+                                            <span class="video__views">43k views</span>
+                                            <span class="video__dot">·</span>
+                                            <span class="video__data">1 months ago</span>
+                                        </p>
+                                        <a href="#" class="video__channelName">Dollie Blair</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 
