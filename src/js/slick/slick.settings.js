@@ -9,6 +9,16 @@ $(document).ready(function(){
         nextArrow: $('#arrows__right'),
     });
 
+    $('.recforyou_slider').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        variableWidth: true,
+        prevArrow: $('#recforyou__arrows_left'),
+        nextArrow: $('#recforyou__arrows_right'),
+    });
+
     $('.rec_slider').slick({
         infinite: true,
         speed: 300,
@@ -18,4 +28,5 @@ $(document).ready(function(){
         prevArrow: $('#rec__arrows_left'),
         nextArrow: $('#rec__arrows_right'),
     });
+
 });

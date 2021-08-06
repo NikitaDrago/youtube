@@ -46,10 +46,28 @@ ul
 
 .arrows
     display: flex
-    width: 66px
     justify-content: space-between
     margin-right: 150px
+    align-items: center
+    &-w
+        display: flex
+        justify-content: space-between
+        width: 66px
     &__left
         cursor: pointer
     &__right
         cursor: pointer
+
+.subscribe
+    &__button
+        width: 154px
+        height: 40px
+        padding: 10px 20px
+        background: #FF0000
+        border-radius: 20px
+        border: none
+        color: #fff
+        font-size: 16px
+        cursor: pointer
+        &:hover
+            background: lighten(#FF0000, 10%)
