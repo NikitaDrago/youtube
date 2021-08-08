@@ -117,6 +117,15 @@ ul {
   background: #ff3333;
 }
 
+@media (max-width: 768px) {
+  .body-wrapper {
+    min-width: 320px;
+    padding: 0;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+
 .navbar {
   min-width: 320px;
 }
@@ -310,6 +319,10 @@ ul {
   margin-bottom: 40px;
 }
 
+.menu-mobile {
+  display: none;
+}
+
 .item__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,9 +349,45 @@ ul {
   height: 26px;
 }
 
+.menu_deactive {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .menu {
     display: none;
+  }
+  .menu-mobile {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 61px;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-box-shadow: 0px -3px 0px 0px #F1F1F1;
+            box-shadow: 0px -3px 0px 0px #F1F1F1;
+  }
+  .menu-mobile-wrapper {
+    text-align: center;
+    margin: 11px 22px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+  .menu-mobile-wrapper__item {
+    margin-right: 15px;
+  }
+  .menu-mobile-wrapper__item:last-child {
+    margin-right: 0;
+  }
+  .item__text {
+    margin: 0;
   }
 }
 
@@ -414,6 +463,40 @@ ul {
   padding: 3px 9px;
 }
 
+.uservideos-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .uservideos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: none;
+  }
+  .uservideos-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .uservideos-sliderblock {
+    margin: auto;
+    margin-bottom: 10px;
+    width: 288px;
+  }
+  .uservideos-sliderblock__video {
+    width: 288px;
+  }
+}
+
 .recommended {
   width: 100%;
 }
@@ -477,6 +560,12 @@ ul {
   border-radius: 12px;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 3px 9px;
+}
+
+@media (max-width: 768px) {
+  .recommended {
+    display: none;
+  }
 }
 
 .recommendedForYou {
@@ -559,5 +648,11 @@ ul {
 
 .recommendedForYou__button {
   margin-right: 40px;
+}
+
+@media (max-width: 768px) {
+  .recommendedForYou {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

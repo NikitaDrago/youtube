@@ -43,3 +43,20 @@
             border-radius: 12px
             background-color: rgba(0, 0, 0, 0.3)
             padding: 3px 9px
+    &-mobile
+        display: none
+@media(max-width: 768px)
+    .uservideos
+        flex-direction: column
+        display: none
+        &-mobile
+            display: flex
+            flex-direction: column
+            align-items: center
+        &-sliderblock
+            margin: auto
+            margin-bottom: 10px
+            width: 288px
+            &__video
+                width: 288px
+
