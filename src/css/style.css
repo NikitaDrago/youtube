@@ -223,7 +223,7 @@ ul {
 .navbar-search__icon {
   position: absolute;
   top: 13px;
-  right: 18px;
+  right: 45px;
 }
 
 .search {
@@ -651,7 +651,7 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .recommendedForYou {
+  .recommended-you {
     display: none;
   }
 }
