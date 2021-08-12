@@ -29,4 +29,14 @@ $(document).ready(function(){
         nextArrow: $('#rec__arrows_right'),
     });
 
+    $('.channelrec_slider').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        variableWidth: true,
+        prevArrow: $('#channelrec__arrows_left'),
+        nextArrow: $('#channelrec__arrows_right'),
+    });
+
 });
