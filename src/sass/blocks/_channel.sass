@@ -1,14 +1,20 @@
 .channel
+    min-width: 320px
     &-wrapper
         width: 100%
         &-container
             margin: 0
-            width: 1595px
+            width: 95%
+            max-width: 1595px
+            height: auto
+            margin-right: 70px
     &-banner
-        width: 1595px
-        height: 280px
         &__img
             border-radius: 14px
+        &_adaptive
+            width: 100%
+            max-width: 1595px
+            height: auto
     &-info
         margin-top: 30px
         display: flex
@@ -69,7 +75,8 @@
             &__text
                 display: flex
                 flex-direction: column
-                width: 548px
+                width: 100%
+                max-width: 548px
                 margin: 0
                 margin-left: 32px
                 margin-top: 17px
@@ -82,8 +89,12 @@
         &-header
             margin-bottom: 59px
             font-size: 18px
+            &__mobile
+                display: none
+                min-width: 272px
             &__item
                 margin-right: 69px
+                margin-top: 10px
                 &:last-child
                     margin-right: 0
                 &:hover
@@ -106,32 +117,31 @@
     &-subscribe
         &__button
             margin-left: 20px
-
-
-            
     &-recommended
-            margin-top: 61px
-            width: 100%
-            height: 280px
-            &-wrapper
-                &__title
-                    font-size: 16px
-                    display: flex
-                    align-items: center
-                    justify-content: space-between
-                &__user
-                    display: flex
-                    align-items: center
-                &__userpic
-                    width: 50px
-                    height: 50px
-                    margin-right: 20px
-                &__username
-                    font-size: 26px
-                &__subtitle
-                    font-size: 16px
-                    color: #C2C2C2
-                    margin-left: 19px
+        margin-top: 61px
+        width: 100%
+        height: 280px
+        &-mobile
+            display: none
+        &-wrapper
+            &__title
+                font-size: 16px
+                display: flex
+                align-items: center
+                justify-content: space-between
+            &__user
+                display: flex
+                align-items: center
+            &__userpic
+                width: 50px
+                height: 50px
+                margin-right: 20px
+            &__username
+                font-size: 26px
+            &__subtitle
+                font-size: 16px
+                color: #C2C2C2
+                margin-left: 19px
             &-slider
                 &_wrapper
                     position: relative
@@ -140,24 +150,112 @@
                 top: 0
                 left: 0
                 width: 100%
-            &-sliderblock
+        &-sliderblock
+            width: 250px
+            margin-top: 30px
+            margin-left: 40px
+            cursor: pointer
+            position: relative
+            &__video
+                border-radius: 14px
                 width: 250px
-                margin-top: 30px
-                margin-left: 40px
-                cursor: pointer
-                position: relative
-                &__video
-                    border-radius: 14px
-                    width: 250px
-                    height: 150px
-            &-video
-                &__duration
-                    position: absolute
-                    right: 10px
-                    top: 116px
-                    color: #fff
-                    border-radius: 12px
-                    background-color: rgba(0, 0, 0, 0.3)
-                    padding: 3px 9px
+                height: 150px
+        &-video
+            &__duration
+                position: absolute
+                right: 10px
+                top: 116px
+                color: #fff
+                border-radius: 12px
+                background-color: rgba(0, 0, 0, 0.3)
+                padding: 3px 9px
             &__button
                 margin-right: 40px
+
+@media(max-width: 1200px)
+    .channel
+        &-hero
+            margin-right: 50px
+            &-video
+                flex-direction: column
+                &__text
+                    margin-left: 0
+            &-recommended
+                margin-top: 82px
+        &-wrapper
+            &-container
+                margin: auto
+
+@media(max-width: 768px)
+    .channel
+        &-hero
+            &-recommended
+                display: none
+            &-video
+                display: none
+            &-header
+                display: none
+                &__mobile
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: space-between
+                    margin-top: 90px
+                &__item
+                    margin-right: 40px
+                    transition: .5s
+                    &_disable
+                        display: none
+                &__droparrow
+                    transition: .5s
+                    transform: rotate(180deg)
+        &-recommended
+            display: none
+            &-mobile
+                display: flex
+                justify-content: center
+            &-sliderblock
+                margin-left: 0
+                margin-top: 16px
+        &-banner
+            &__img
+                display: none
+        &-wrapper
+            &-container
+                width: 100%
+                position: relative
+                &::before
+                    display: block
+                    position: absolute
+                    content: ''
+                    width: 100%
+                    height: 100px
+                    left: 0
+                    top: 0
+                    background: url(../img/channel/banner.jpg) no-repeat
+                    background-size: cover
+                    background-position: center
+                    z-index: -1
+        &-info
+            position: relative
+            bottom: -70px
+            margin: 0
+            flex-direction: column
+            margin-left: 16px
+        &-user
+            flex-direction: column
+            align-items: start
+            &__icon
+                & img
+                    width: 70px
+                    height: 70px
+            &__name
+                font-size: 20px
+        &-button
+            &__notify
+                display: none
+        &-subscribe
+            &__button
+                margin-left: 0
+                margin-top: 10px
+        &-container
+            margin-left: 16px

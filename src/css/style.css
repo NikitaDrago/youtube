@@ -357,10 +357,13 @@ ul {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .menu {
     display: none;
   }
+}
+
+@media (max-width: 768px) {
   .menu-mobile {
     display: block;
     position: fixed;
@@ -660,22 +663,30 @@ ul {
   }
 }
 
+.channel {
+  min-width: 320px;
+}
+
 .channel-wrapper {
   width: 100%;
 }
 
 .channel-wrapper-container {
   margin: 0;
-  width: 1595px;
-}
-
-.channel-banner {
-  width: 1595px;
-  height: 280px;
+  width: 95%;
+  max-width: 1595px;
+  height: auto;
+  margin-right: 70px;
 }
 
 .channel-banner__img {
   border-radius: 14px;
+}
+
+.channel-banner_adaptive {
+  width: 100%;
+  max-width: 1595px;
+  height: auto;
 }
 
 .channel-info {
@@ -804,7 +815,8 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 548px;
+  width: 100%;
+  max-width: 548px;
   margin: 0;
   margin-left: 32px;
   margin-top: 17px;
@@ -825,8 +837,14 @@ ul {
   font-size: 18px;
 }
 
+.channel-hero-header__mobile {
+  display: none;
+  min-width: 272px;
+}
+
 .channel-hero-header__item {
   margin-right: 69px;
+  margin-top: 10px;
 }
 
 .channel-hero-header__item:last-child {
@@ -867,6 +885,10 @@ ul {
   height: 280px;
 }
 
+.channel-recommended-mobile {
+  display: none;
+}
+
 .channel-recommended-wrapper__title {
   font-size: 16px;
   display: -webkit-box;
@@ -905,11 +927,11 @@ ul {
   margin-left: 19px;
 }
 
-.channel-recommended-slider_wrapper {
+.channel-recommended-wrapper-slider_wrapper {
   position: relative;
 }
 
-.channel-recommended__slider {
+.channel-recommended-wrapper__slider {
   position: absolute;
   top: 0;
   left: 0;
@@ -940,7 +962,136 @@ ul {
   padding: 3px 9px;
 }
 
-.channel-recommended__button {
+.channel-recommended-video__button {
   margin-right: 40px;
+}
+
+@media (max-width: 1200px) {
+  .channel-hero {
+    margin-right: 50px;
+  }
+  .channel-hero-video {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .channel-hero-video__text {
+    margin-left: 0;
+  }
+  .channel-hero-recommended {
+    margin-top: 82px;
+  }
+  .channel-wrapper-container {
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .channel-hero-recommended {
+    display: none;
+  }
+  .channel-hero-video {
+    display: none;
+  }
+  .channel-hero-header {
+    display: none;
+  }
+  .channel-hero-header__mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 90px;
+  }
+  .channel-hero-header__item {
+    margin-right: 40px;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .channel-hero-header__item_disable {
+    display: none;
+  }
+  .channel-hero-header__droparrow {
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .channel-recommended {
+    display: none;
+  }
+  .channel-recommended-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .channel-recommended-sliderblock {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+  .channel-banner__img {
+    display: none;
+  }
+  .channel-wrapper-container {
+    width: 100%;
+    position: relative;
+  }
+  .channel-wrapper-container::before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100px;
+    left: 0;
+    top: 0;
+    background: url(../img/channel/banner.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  .channel-info {
+    position: relative;
+    bottom: -70px;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 16px;
+  }
+  .channel-user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .channel-user__icon img {
+    width: 70px;
+    height: 70px;
+  }
+  .channel-user__name {
+    font-size: 20px;
+  }
+  .channel-button__notify {
+    display: none;
+  }
+  .channel-subscribe__button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .channel-container {
+    margin-left: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
