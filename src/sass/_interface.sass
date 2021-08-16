@@ -2,6 +2,17 @@
     box-sizing: border-box
 body
     width: 100%
+a
+    text-decoration: none
+    color: #000
+ul
+    list-style: none
+input[type="checkbox"]
+    appearance: none
+    cursor: pointer
+    &:focus
+        outline: 0
+        
 .container
     width: 100%
     margin: auto
@@ -10,13 +21,11 @@ body
     border: none
     background: none
     padding: 0
-ul
-    list-style: none
 
 .body
     &-wrapper
         padding-left: 30px
-        margin-top: 60px
+        margin-top: 30px
         display: flex
 .videos
     &-wrapper

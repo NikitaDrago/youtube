@@ -1,0 +1,23 @@
+.toggle
+    height: 28px
+    width: 44px
+    border-radius: 14px
+    display: inline-block
+    position: relative
+    margin: 0
+    background: rgba(235, 235, 235, .3)
+    transition: all .2s ease
+    &:after
+        content: ''
+        position: absolute
+        top: 2px
+        left: 2px
+        width: 24px
+        height: 24px
+        border-radius: 50%
+        background: #2196F3
+        transition: all .2s cubic-bezier(.5,.1,.75,1.35)
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.237602)
+    &:checked
+        &:after
+            transform: translatex(16px)
