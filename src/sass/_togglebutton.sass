@@ -15,9 +15,25 @@
         width: 24px
         height: 24px
         border-radius: 50%
-        background: #2196F3
+        background: red
         transition: all .2s cubic-bezier(.5,.1,.75,1.35)
         box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.237602)
     &:checked
         &:after
             transform: translatex(16px)
+            background: #2196F3
+
+@media(max-width: 768px)
+    .toggle
+        width: 30px
+        height: 19px
+        border-radius: 9px
+        &:after
+            top: 1.36px
+            left: 1.36px
+            width: 16px
+            height: 16px
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.237602)
+        &:checked
+            &:after
+                transform: translatex(11px)

@@ -16,7 +16,7 @@
     <div class="container">
         <div class="navbar-wrapper">
             <div class="navbar-logoblock">
-                <button class="button navbar-logoblock__menu" id="menuButton">
+                <button class="button navbar-logoblock__menu" id="channelbutton">
                     <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M18.6364 3H1.36364C0.61 3 0 2.328 0 1.5C0 0.672 0.61 0 1.36364 0H18.6364C19.3891 0 20 0.672 20 1.5C20 2.328 19.3891 3 18.6364 3ZM1.36364 7H18.6364C19.3891 7 20 7.672 20 8.5C20 9.328 19.3891 10 18.6364 10H1.36364C0.61 10 0 9.328 0 8.5C0 7.672 0.61 7 1.36364 7ZM18.6364 14H1.36364C0.61 14 0 14.672 0 15.5C0 16.328 0.61 17 1.36364 17H18.6364C19.3891 17 20 16.328 20 15.5C20 14.672 19.3891 14 18.6364 14Z"
@@ -87,7 +87,7 @@
 
 <body>
     <section class="body-wrapper">
-        <div class="menu menu_deactive" id="menu">
+        <div class="menu menu_deactive" id="channelmenu">
             <ul class="menu-wrapper menu-wrapper_data">
                 <li class="menu-wrapper__item">
                     <button class="button item__button">
@@ -355,12 +355,27 @@
                 </div>
             </div>
         </div>
+        <div class="videoplayer_mobile">
+            <div class="videoplayer-video_mobile thumb-wrap">
+                <div id="ytplayermobile"></div>
+            </div>
+        </div>
         <div class="videoplayer">
-            <div class="videoplayer-container">
-                <div class="videoplayer-video">
+            <div class="videoplayer-container" id="videocontainer">
+                <div class="thumb-wrap videoplayer-video">
                     <div id="ytplayer"></div>
                 </div>
-                <span class="videoplayer-video__title">Apple Cat Running</span>
+                <div class="videoplayer-video__title-wrapper">
+                    <span class="videoplayer-video__title">Apple Cat Running</span>
+                    <div class="videoplayer-video__arrow">
+                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.7624 0.798368L9.28113 0.263702C9.11428 0.0879298 8.91953 0 8.69714 0C8.47025 0 8.27771 0.0879298 8.11937 0.263702L5 3.72814L1.88063 0.263789C1.72229 0.0880173 1.52975 8.74923e-05 1.30294 8.74923e-05C1.08047 8.74923e-05 0.885722 0.0880173 0.718866 0.263789L0.243902 0.798455C0.0813008 0.978952 0 1.19523 0 1.44712C0 1.70374 0.0813796 1.91757 0.243902 2.08862L4.42231 6.72912C4.5764 6.90971 4.76886 7 5 7C5.22681 7 5.42147 6.90971 5.58399 6.72912L9.7624 2.08862C9.92075 1.91276 10 1.69893 10 1.44712C10 1.19996 9.92075 0.983764 9.7624 0.798368Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                </div>
+
                 <div class="videoplayer-video__info">
                     <div class="videoplayer-video__views">123k views</div>
                     <div class="videoplayer-video__emotions">
@@ -380,7 +395,25 @@
                             <img src="img/videoplayer/more.svg" alt="" class="video-share">
                         </div>
                     </div>
+                    <div class="videoplayer-video__emotions_mobile">
+                        <div class="videplayer-video__like videoplayer-video__item videoplayer-video_margin">
+                            <img src="img/videoplayer/like.svg" alt="" class="video__like">
+                            <span class="video__counter video__counter_margin">123k</span>
+                        </div>
+                        <div class="videplayer-video__dislike videoplayer-video__item videoplayer-video_margin">
+                            <img src="img/videoplayer/dislike.svg" alt="" class="video__dislike">
+                            <span class="video__counter video__counter_margin">435k</span>
+                        </div>
+                        <div class="videplayer-video__share videoplayer-video__item videoplayer-video_margin">
+                            <img src="img/videoplayer/share.svg" alt="" class="video-share">
+                            <span class="video__counter video__counter_margin">Share</span>
+                        </div>
+                        <div class="videplayer-video__share videoplayer-video_margin">
+                            <img src="img/videoplayer/more.svg" alt="" class="video-share">
+                        </div>
+                    </div>
                 </div>
+                <hr class="videoplayer__line">
                 <div class="videoplayer-video__description">
                     <div class="videoplayer-video__description-wrapper">
                         <div class="videoplayer-video__channelpic">
@@ -389,6 +422,8 @@
                         <div class="videoplayer-video-text">
                             <span class="videoplayer-video-text__channelname">Food & Drink</span>
                             <span class="videoplayer-video-text__subtitle">Published on 14 Jun 2019</span>
+                            <span class="videoplayer-video-text__subtitle_mobile">245K subscribed</span>
+
                             <span class="videoplayer-video-text__describe">A successful marketing plan relies heavily on
                                 the
                                 pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it
@@ -401,9 +436,11 @@
                             <button class="button videoplayer-video-text__showmore">Show more</button>
                         </div>
                     </div>
-                    <button class="subscribe__button">Subscribe 2.3m</button>
-                </div>
+                    <button class="subscribe__button videoplayer-subscribe__button">Subscribe 2.3m</button>
+                    <button class="button videoplayer-subscribe__button_mobile">Subscribe</button>
 
+                </div>
+                <hr class="videoplayer__line videoplayer__line_mobile">
             </div>
             <div class="videoplayer-recommended">
                 <div class="videoplayer-recommended__text">
@@ -415,9 +452,11 @@
                 </div>
                 <div class="videoplayer-recommended-videos">
                     <div class="videoplayer-recommended-videos__wrapper">
-                        <span class="videoplayer-recommended-videos__duration">8:00</span>
-                        <img src="img/videoplayer/videos/video-1.jpg" alt=""
-                            class="videoplayer-recommended-videos__video">
+                        <div class="videoplayer-recommended-videos__video">
+                            <span class="videoplayer-recommended-videos__duration">8:00</span>
+                            <img src="img/videoplayer/videos/video-1.jpg" alt=""
+                                class="videoplayer-recommended-videos__video">
+                        </div>
                         <span class="videoplayer-recommended-video__name">Baby Monitor Technology</span>
                         <div class="video-dscWrapper">
                             <span class="videoplayer-recommended-video__views">13k views</span>
@@ -507,7 +546,7 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="js/slick/slick.min.js"></script>
 <script src="js/slick/slick.settings.js"></script>
-<script src="js/menu.js"></script>
+<script src="js/channelmenu.js"></script>
 <script src="js/youtube.api.js"></script>
 
 </html>

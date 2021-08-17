@@ -38,5 +38,4 @@ $(document).ready(function(){
         prevArrow: $('#channelrec__arrows_left'),
         nextArrow: $('#channelrec__arrows_right'),
     });
-
 });

@@ -4,10 +4,17 @@ var tag = document.createElement('script');
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
   var player;
+  var playerMobile;
   function onYouTubePlayerAPIReady() {
     player = new YT.Player('ytplayer', {
       height: '700',
       width: '1363',
       videoId: '6CDIl_vpZp8'
     });
+    playerMobile = new YT.Player('ytplayermobile', {
+      height: '700',
+      width: '1363',
+      videoId: '6CDIl_vpZp8'
+    });
   }
+  

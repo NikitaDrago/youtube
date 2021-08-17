@@ -2,18 +2,21 @@
     min-width: 320px
     &-wrapper
         width: 100%
+        display: grid
         &-container
             margin: 0
             width: 95%
-            max-width: 1595px
+            // max-width: 1595px
             height: auto
             margin-right: 70px
+            min-width: 1211px
     &-banner
+        width: 100%
         &__img
             border-radius: 14px
         &_adaptive
             width: 100%
-            max-width: 1595px
+            // max-width: 1595px
             height: auto
     &-info
         margin-top: 30px
@@ -41,7 +44,7 @@
         margin-top: 20px
         display: flex
         justify-content: space-between
-        margin-right: 153px
+        margin-right: 83px
         &-recommended
             width: 188px
             &-user
@@ -142,14 +145,14 @@
                 font-size: 16px
                 color: #C2C2C2
                 margin-left: 19px
-            &-slider
-                &_wrapper
-                    position: relative
-            &__slider
-                position: absolute
-                top: 0
-                left: 0
-                width: 100%
+        &-slider
+            &_wrapper
+                position: relative
+        &__slider
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
         &-sliderblock
             width: 250px
             margin-top: 30px
@@ -174,6 +177,9 @@
 
 @media(max-width: 1200px)
     .channel
+        &-wrapper
+            &-container
+                min-width: 320px
         &-hero
             margin-right: 50px
             &-video
@@ -185,6 +191,12 @@
         &-wrapper
             &-container
                 margin: auto
+        &-banner
+            width: 100%
+            &_adaptive
+                width: 98%
+        &-info
+            width: 95%
 
 @media(max-width: 768px)
     .channel
