@@ -2,12 +2,12 @@
     box-sizing: border-box
 body
     width: 100%
-a
-    text-decoration: none
-    color: #000
 ul
     list-style: none
-input[type="checkbox"]
+.link
+    text-decoration: none
+    color: $text-color
+.checkbox
     appearance: none
     cursor: pointer
     &:focus
@@ -45,7 +45,7 @@ input[type="checkbox"]
         justify-content: space-between
         align-items: center
         font-size: 13px
-        color: #C2C2C2
+        color: $subtitle-color
         margin-top: 4px
         &__description
             margin: 0
@@ -54,7 +54,7 @@ input[type="checkbox"]
         font-size: 16px
         margin-top: 10px
     &__channelName
-        color: #C2C2C2
+        color: $subtitle-color
         text-decoration: none
         &:hover
             color: #808080
