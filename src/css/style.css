@@ -7,23 +7,23 @@ body {
   width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
-
 ul {
   list-style: none;
 }
 
-input[type="checkbox"] {
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.checkbox {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   cursor: pointer;
 }
 
-input[type="checkbox"]:focus {
+.checkbox:focus {
   outline: 0;
 }
 
@@ -1148,10 +1148,12 @@ input[type="checkbox"]:focus {
 .videoplayer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[2];
-      grid-template-columns: repeat(2, auto);
+  -ms-grid-columns: auto 367px;
+      grid-template-columns: auto 367px;
   margin-right: 70px;
   min-width: 320px;
+  width: 100%;
+  margin-left: 50px;
 }
 
 .videoplayer_mobile {
@@ -1159,9 +1161,7 @@ input[type="checkbox"]:focus {
 }
 
 .videoplayer-container {
-  margin-left: 50px;
   margin-right: 40px;
-  width: 1363px;
 }
 
 .videoplayer-container_flex {
@@ -1314,6 +1314,10 @@ input[type="checkbox"]:focus {
   width: 80px;
   height: 80px;
   margin-right: 12px;
+}
+
+.videoplayer-recommended {
+  max-width: 367px;
 }
 
 .videoplayer-recommended__text {
